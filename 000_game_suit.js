@@ -39,11 +39,16 @@ while (opsi=="ya"){
     }else{
         var player=prompt('Pilih opsi: [Lingkaran,Segi Tiga, Persegi] \n \nRules! \nLingkaran     WIN v.s     Segi Tiga\nSegi Tiga      WIN v.s     Persegi\nPersegi         WIN v.s     Lingkaran');
         player=player.toLowerCase();
+        if(player=="persegi" || player=="lingkaran" || player=="segi tiga"){
         compRNG();
         alert(Rule(player));
         counter--;
         opsi = prompt("Ingin Coba lagi? [ya , tidak] -"+counter+" Nyawa");
         opsi = opsi.toLowerCase();
+            
+        }else{
+            alert("Player: "+player+" tidak tersedia!");
+        }
         
     }
     
